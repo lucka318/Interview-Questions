@@ -69,7 +69,8 @@ public class Question1_2 {
 
 	private static String sort(String s) {
 		char[] sorted_arr = s.toCharArray();
-		Arrays.sort(sorted_arr);
+		Arrays.sort(sorted_arr); // watch out! sorted_arr.toString returns an
+									// object identifier !!!!!
 		return new String(sorted_arr);
 	}
 
