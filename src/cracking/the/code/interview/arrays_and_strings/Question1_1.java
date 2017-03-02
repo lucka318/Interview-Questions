@@ -30,8 +30,8 @@ public class Question1_1 {
 	 * or integer is already 1. If so, string doesn't have all unique
 	 * characters; memory O(1), time O(1)
 	 * 
-	 * 3. Instead of an array, we use bit vector. If we use ascii characters we need
-	 * 8 integers that will serve us as bit vectors
+	 * 3. Instead of an array, we use bit vector. If we use ascii characters we
+	 * need 8 integers that will serve us as bit vectors
 	 * 
 	 * 4. If we can't use extra memory, that is, we cannot use data structures,
 	 * we can iterate over string with two pointers (compare every char of the
@@ -65,7 +65,7 @@ public class Question1_1 {
 		}
 
 		flag = allUniqueCharactersBitVector(s);
-		
+
 		if (flag) {
 			System.out.println("String has unique characters");
 		} else {
@@ -111,8 +111,6 @@ public class Question1_1 {
 				return false;
 			}
 		}
-
 		return true;
 	}
-
 }
