@@ -13,6 +13,7 @@ import cracking.the.code.inerview.utilitiles.Matrix;
 public class Question1_8 {
 
 	/**
+	 * Memory O(n), Time O(n^2)
 	 * 
 	 * @param args
 	 */
