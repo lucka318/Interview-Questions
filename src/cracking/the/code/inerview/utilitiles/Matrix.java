@@ -23,4 +23,19 @@ public class Matrix {
 		return randomMatrix;
 	}
 
+	public int getSize() {
+		return size;
+	}
+
+	public int getElement(int i, int j) {
+		checkIndices(i, j);
+		return matrix[i][j];
+	}
+
+	private void checkIndices(int i, int j) {
+		if (i < 0 || i >= size || j < 0 || j >= size) {
+			throw new IllegalArgumentException("Wrong indices");
+		}
+	}
+
 }
