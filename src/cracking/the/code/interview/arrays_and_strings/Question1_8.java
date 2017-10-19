@@ -2,7 +2,7 @@ package cracking.the.code.interview.arrays_and_strings;
 
 import java.util.Scanner;
 
-import cracking.the.code.inerview.utilitiles.Matrix;
+import cracking.the.code.interview.utilitiles.Matrix;
 
 /**
  * If an element in a matrix is 0, set entire row and column to 0.

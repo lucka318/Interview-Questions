@@ -2,7 +2,7 @@ package cracking.the.code.interview.arrays_and_strings;
 
 import java.util.Scanner;
 
-import cracking.the.code.inerview.utilitiles.Matrix;
+import cracking.the.code.interview.utilitiles.Matrix;
 
 /**
  * Rotate matrix
