@@ -1,6 +1,6 @@
 package cracking.the.code.interview.trees_and_graphs;
 
-import cracking.the.code.interview.utilitiles.TreeNode;
+import cracking.the.code.interview.utilities.TreeNode;
 
 /**
  * Determine if the tree is balanced. Tree is balanced if the heights of two

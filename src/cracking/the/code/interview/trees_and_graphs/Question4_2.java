@@ -1,6 +1,6 @@
 package cracking.the.code.interview.trees_and_graphs;
 
-import cracking.the.code.interview.utilitiles.TreeNode;
+import cracking.the.code.interview.utilities.TreeNode;
 
 public class Question4_2 {
 
