@@ -3,9 +3,10 @@ package cracking.the.code.interview.utilities;
 public class TreeNode {
 	
 	private int value;
+	private TreeNode parent;;
 	private TreeNode left;
 	private TreeNode right;
-	
+
 	public TreeNode(int value, TreeNode left, TreeNode right) {
 		this.value = value;
 		this.left = left;
@@ -22,6 +23,14 @@ public class TreeNode {
 
 	public TreeNode getRight() {
 		return right;
+	}
+	
+	public TreeNode getParent() {
+		return parent;
+	}
+
+	public void setParent(TreeNode parent) {
+		this.parent = parent;
 	}
 
 	@Override
