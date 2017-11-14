@@ -1,4 +1,4 @@
-package cracking.the.code.interview.utilitiles;
+package cracking.the.code.interview.utilities;
 
 public class GraphNode {
 	

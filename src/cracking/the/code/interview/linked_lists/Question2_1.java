@@ -5,8 +5,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import cracking.the.code.interview.utilitiles.List;
-import cracking.the.code.interview.utilitiles.Node;
+import cracking.the.code.interview.utilities.List;
+import cracking.the.code.interview.utilities.Node;
 
 public class Question2_1 {
 
