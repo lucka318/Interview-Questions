@@ -3,7 +3,7 @@ package cracking.the.code.interview.utilities;
 public class TreeNode {
 	
 	private int value;
-	private TreeNode parent;;
+	private TreeNode parent;
 	private TreeNode left;
 	private TreeNode right;
 

@@ -8,23 +8,44 @@ public class Question4_8 {
 		TreeNode root = createBinaryTree();
 		TreeNode nodeOne = root.getLeft().getLeft().getLeft();
 		TreeNode nodeTwo = root.getLeft().getRight();
-	//	TreeNode node = findFirstCommonAncestor(root, nodeOne, nodeTwo);
-		//System.out.println(node.getValue());
+		TreeNode node = findFirstCommonAncestor(root, nodeOne, nodeTwo);
+		System.out.println(node.getValue());
 		root = createBinaryTreeParentLinks();
 		nodeOne = root.getLeft().getLeft().getLeft();
 		nodeTwo = root.getLeft().getRight();
-		TreeNode node = findFirstCommonAncestorLinksToParent(root, nodeOne, nodeTwo);
+		node = findFirstCommonAncestorLinksToParent(root, nodeOne,
+				nodeTwo);
 		System.out.println(node.getValue());
 	}
 
 	private static TreeNode findFirstCommonAncestor(TreeNode root,
 			TreeNode nodeOne, TreeNode nodeTwo) {
+		if (!covers(root, nodeOne) || !covers(root, nodeTwo)) {
+			return null;
+		}
 
-		return null;
+		boolean isLeftOne = covers(root.getLeft(), nodeOne);
+		boolean isLeftTwo = covers(root.getLeft(), nodeTwo);
+		if (isLeftOne != isLeftTwo) {
+			return root;
+		}
+		TreeNode child = isLeftOne ? root.getLeft() : root.getRight();
+		return findFirstCommonAncestor(child, nodeOne, nodeTwo);
+	}
+
+	private static boolean covers(TreeNode root, TreeNode nodeOne) {
+		if (root == null) {
+			return false;
+		} else if (root == nodeOne) {
+			return true;
+		}
+		return covers(root.getLeft(), nodeOne)
+				|| covers(root.getRight(), nodeOne);
 	}
 
 	/**
 	 * Time complexity is O(d) where d is the max of two depth
+	 * 
 	 * @param root
 	 * @param nodeOne
 	 * @param nodeTwo
@@ -35,23 +56,23 @@ public class Question4_8 {
 		int depthNodeOne = depth(nodeOne);
 		int depthNodeTwo = depth(nodeTwo);
 		int delta = depthNodeOne - depthNodeTwo;
-		if(delta < 0) {
+		if (delta < 0) {
 			TreeNode pom = nodeOne;
 			nodeOne = nodeTwo;
 			nodeTwo = pom;
 			delta *= -1;
 		}
 
-		while(delta > 0) {
+		while (delta > 0) {
 			nodeOne = nodeOne.getParent();
 			delta--;
 		}
-		
-		while(nodeOne != null && nodeTwo != null && nodeOne != nodeTwo) {
+
+		while (nodeOne != null && nodeTwo != null && nodeOne != nodeTwo) {
 			nodeOne = nodeOne.getParent();
 			nodeTwo = nodeTwo.getParent();
 		}
-		
+
 		return nodeOne;
 	}
 
